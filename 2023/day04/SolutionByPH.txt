@@ -1,0 +1,36 @@
+- Explain in your own words and examples, what is Shell Scripting for DevOps.
+
+	=> Shell is a command line interpreter and it translates every command entered by the user into the language understood by the Kernel. 
+	It is used to call a program or a function by the user in Linux by entering the command at the command-line interface.
+      Program is set of shell commands writen as .sh file
+
+ - What is `#!/bin/bash?` can we write `#!/bin/sh` as well?
+	=>/bin/sh used previously as link to /bin/bash,however few OS now referer /bin/sh to /bin/dash etc,Hence use /bin/bash for convenience
+	=> which bash -gives path of bash
+
+ - Write a Shell Script which prints `I will complete #90DaysOofDevOps challenge`
+ - Write a Shell Script to take user input, input from arguments and print the variables.
+ - Write an Example of If else in Shell Scripting by comparing 2 numbers
+
+1.Save below code as ComapareNo.sh
+2.chmod 777 ComapareNo.sh
+3.execute and give any number as argument 
+ ./ComapareNo.sh 5
+------------------------------------------------
+#!/bin/bash
+
+echo "#90DaysOfDevopsChallenge"
+echo "Enter One Number"
+
+read  A
+echo "First Number is:$A"
+
+echo "You have given second number as argument is $1 "
+
+if  [ $A -gt $1 ]
+then
+        echo "$A is greater than $1"
+else
+        echo "$1 is greater that $A"
+fi
+----------------------------------------------------
